@@ -1,0 +1,65 @@
+<?php 
+if(isset($_GET['rel']))
+{
+if($_GET['rel']!='menu'){
+	include 'header.php';
+	echo "<div id='content'>";
+}
+}else{
+	include 'header.php';
+	echo "<div id='content'>";
+}
+?>
+          <div class="inner cover">
+            <h1 class="cover-heading">FAQ</h1>
+<div>
+
+    <li id="li-one" onclick="paragraph(this.id);"><span>First Para Info</span></li>
+    <p id="li-one-para">
+      This is just an example of Simple Accordion
+      This is just an example of Simple Accordion
+      This is just an example of Simple Accordion
+    </p>
+  
+    <li id="li-two" onclick="paragraph(this.id);"><span>Second Para Info</span></li>
+    <p id="li-two-para">
+      This is just an example of Simple Accordion
+      This is just an example of Simple Accordion
+      This is just an example of Simple Accordion
+    </p>
+
+    <li id="li-third" onclick="paragraph(this.id);"><span>Third Para Info</span></li>
+    <p id="li-third-para">
+      This is just an example of Simple Accordion
+      This is just an example of Simple Accordion
+      This is just an example of Simple Accordion
+    </p>
+
+    <li id="li-fourth" onclick="paragraph(this.id);"><span>Third Para Info</span></li>
+    <p id="li-fourth-para">
+      This is just an example of Simple Accordion
+      This is just an example of Simple Accordion
+      This is just an example of Simple Accordion
+    </p>
+
+</div>
+          </div>
+<?php 
+if(isset($_GET['rel']))
+{
+if($_GET['rel']!='menu'){
+	echo "</div>";
+	include 'footer.php';
+}
+}
+else{
+	echo "</div>";
+	include 'footer.php';
+}
+?>
+<script type="text/javascript">
+$(document).ready(function(){
+   $(".masthead-nav a").removeClass('active');
+   $("#faq").addClass('active');
+});
+</script>
